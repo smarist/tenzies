@@ -1,0 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+}
+
+.App{
+  border: 25px solid rgb(12, 12, 62);
+  border-radius: 5px;
+}
