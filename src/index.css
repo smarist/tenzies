@@ -15,6 +15,7 @@ main{
   max-width: 800vh;
   border-radius: 5px;
   display: flex;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
 }
@@ -41,4 +42,26 @@ main{
 
 .die-num{
   font-size: 2rem;
+}
+
+.roll-btn{
+  margin-top: 2rem;
+  height: 50px;
+  width: 100px;
+  border: none;
+  border-radius: 6px;
+  background-color: #5035FF;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+.roll-btn:focus{
+  outline: none;
+}
+
+.roll-btn:active{
+  box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
 }
