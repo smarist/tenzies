@@ -4,9 +4,41 @@
 
 body{
   margin: 0;
+  background-color: #0B2434;
+  padding: 20px;
 }
 
-.App{
-  border: 25px solid rgb(12, 12, 62);
+main{
+  background-color: #f5f5f5;
   border-radius: 5px;
+  height: 93vh;
+  max-width: 800vh;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.die-container{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto auto;
+  grid-gap: 20px;
+  
+}
+
+.die-face{
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  background: white;
+}
+
+.die-num{
+  font-size: 2rem;
 }
