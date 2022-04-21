@@ -3,7 +3,6 @@ import './index.css';
 import Die from "../src/components/die"
 import {nanoid} from "nanoid";
 import Confetti from "react-confetti"
-import Timer from './components/timer';
 
 
 function App() {
@@ -95,7 +94,6 @@ function holdDice(id){
  />))
   return (
     <main>
-        
         {tenzies && <Confetti></Confetti>}
         {tenzies && 
         <div className='win-section'>
@@ -113,6 +111,7 @@ function holdDice(id){
         className='roll-btn'
         onClick={rollDice}
         >{tenzies? "New Game": "Roll" }</button>
+        {tenzies && <button className='save-btn' onClick={saveScore()}>Save score</button>}
         
     </main>
   );
