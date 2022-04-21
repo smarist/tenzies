@@ -6,6 +6,7 @@ body{
   margin: 0;
   background-color: #0B2434;
   padding: 20px;
+  font-family: 'Send Flowers', cursive;
 }
 
 main{
@@ -20,8 +21,9 @@ main{
   align-items: center;
 }
 .score, .won {
-  font-size: 40px;
+  font-size: 2rem;
   margin: 0;
+  text-align: center;
 }
 
 .wrong{

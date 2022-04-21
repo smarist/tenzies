@@ -29,8 +29,9 @@ React.useEffect(() => {
   if(allHeld && allSameValue){
     setTenzies(true)
     console.log("You won")
+    localStorage.setItem("score", JSON.stringify(score))
      if(firstValue === 6){
-       setScore(prevScore => 60)
+      setScore(prevScore => 60)
      }else if(firstValue === 5){
       setScore(prevScore => 50)
      }else if(firstValue === 4){
@@ -57,12 +58,20 @@ function allNewDice(){
   }
  
 console.log(score)
+
+function saveScore(){
+  if(allHeld && allSameValue){
+    console.log("saved")
+    localStorage.setItem("score", JSON.stringify(score))
+}
+}
+
 function rollDice(){
   if(!tenzies){
     setDice(oldDice => oldDice.map(die => {
       return die.isHeld? die: generateDice()
   }))
-} else {
+ } else {
   setTenzies(false)
   setDice(allNewDice())
 } 
@@ -71,7 +80,7 @@ function rollDice(){
  
 function holdDice(id){
   setDice(oldDice => oldDice.map(die => {
-    return die.id === id? {...die, isHeld: !die.isHeld} : die
+    return die.id === id ? {...die, isHeld: !die.isHeld} : die
   }))
 
 }
@@ -86,7 +95,7 @@ function holdDice(id){
  />))
   return (
     <main>
-        <Timer/>
+        
         {tenzies && <Confetti></Confetti>}
         {tenzies && 
         <div className='win-section'>
@@ -104,7 +113,6 @@ function holdDice(id){
         className='roll-btn'
         onClick={rollDice}
         >{tenzies? "New Game": "Roll" }</button>
-        {tenzies && <button className='save-btn'>Save score</button>}
         
     </main>
   );
